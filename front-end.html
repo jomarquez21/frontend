@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>title</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-controller="appController">
+        <header>
+            <div class="box_header">
+                <h2>Prueba de front end</h2>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="box_white">
+                    <div class="box_accordions">
+                        <div ng-repeat="user in list_user" class="accordions bg_g_p" ng-click="expand = !expand">
+                            <p class="p_title">{{user.name}}</p>
+                            <i class="icon-keyinformation icn_magenta"></i>
+                            <i class="icon-down icn"></i>
+                            <div class="box_info slide_js" ng-show="expand">
+                                <div class="box_avatar" style="background-image: url('{{user.picture}}');"></div>
+                                <div class="clearfix"></div>
+                                <ul>
+                                    <div class="row m_b_2">
+                                        <div class=" col-sm-5 col-md-5">
+                                            <li>
+                                                <div class="text_one"><p>Id: </p></div>
+                                                <div class="text_two"> <span>{{user.id}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Status: </p></div>
+                                                <div class="text_two"> <span>Active</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Age:</p></div>
+                                                <div class="text_two"><span>{{user.age}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Gender: </p></div>
+                                                <div class="text_two"><span>{{user.gender}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Eyes color: </p></div>
+                                                <div class="text_two"><span>{{user.eyeColor}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Email: </p></div>
+                                                <div class="text_two"><span>{{user.email}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"> <p>Phone: </p></div>
+                                                <div class="text_two"><span>{{user.phone}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"> <p>Adress: </p></div>
+                                                <div class="text_two"><span>{{user.address}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                        </div>
+                                        <div class=" col-sm-5 col-md-5">
+                                            <li>
+                                                <div class="text_one"> <p>Balance:</p></div>
+                                                <div class="text_two"><span>{{user.balance}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"> <p>About: </p></div>
+                                                <div class="text_two"> <span>{{user.about}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"> <p>Registered:</p></div>
+                                                <div class="text_two"><span>{{user.regustered}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Greeting: </p></div>
+                                                <div class="text_two"><span>{{user.greeting}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"><p>Favorite fruit:</p></div>
+                                                <div class="text_two"><span>{{user.favoriteFruit}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text_one"> <p>Company:</p></div>
+                                                <div class="text_two"><span>{{user.company}}</span></div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="row m_b_2">
+                                        <div class=" col-md-5 m_b_2">
+                                            <li><h3 style="margin-top:-6px">Friends</h3></li>
+                                            <li ng-repeat="friend in user.friends track by $index"><p>{{friend.name}}</p></li>
+                                        </div>
+                                        <div class="col-md-5">
+                                        <h3 style="margin-top:-6px">Map</h3>
+                                            <div class="map">
+                                                <map ng-transclude class='google-map' center="[user.latitude, user.longitudes]"></map>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tags">
+                                            <ul>
+                                                <h3>Tags</h3>
+                                                <li ng-repeat="tag in user.tags track by $index"><p><span>#</span>{{tag}}</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="box_footer">
+                <div class="box_info_footer text-center">
+                    <div class="photo_developer"></div>
+                    <div class="info_developer">
+                        <p>Jose Enrique Marquez / Desarrollador front end - back end</p>
+                        <p></p>
+                        <p>Skype: <span>jomarquez21</span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </footer>
+    <script src='maps.googleapis.js'></script>
+    <script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-animate.min.js"></script>
+    <script type="text/javascript" src="ng-maps.js"></script>
+    <script type="text/json" json-data init="loadData(data)">[{"id":0,"guid":"53503b98-fe85-4318-8c4c-7db38ddad689","isActive":false,"balance":"$3,877.50","picture":"http://placehold.it/120x120","age":33,"eyeColor":"blue","name":"Donna Huffman","gender":"female","company":"CANOPOLY","email":"donnahuffman@canopoly.com","phone":"+1 (846) 504-3690","address":"347 Menahan Street, Jamestown, Oklahoma, 2920","about":"Eiusmod est ipsum enim exercitation esse ut proident ipsum. Eu aute laborum minim aliqua nisi minim velit ea elit nisi cupidatat commodo consequat. Veniam fugiat sint dolor non Lorem enim eiusmod magna ad. Amet ut esse irure dolore quis consequat fugiat non ut adipisicing. Sint incididunt ad Lorem ipsum qui in sit. Cillum aute tempor do amet ex anim reprehenderit reprehenderit.\r\n","registered":"2014-02-16T12:24:06 -00:00","latitude":1.224098,"longitude":64.994661,"tags":["eu","ex","ipsum","Lorem","veniam","laboris","culpa"],"friends":[{"id":0,"name":"Clark Baldwin"},{"id":1,"name":"Sharpe Atkins"},{"id":2,"name":"Latonya Wells"}],"greeting":"Hello, Donna Huffman! You have 10 unread messages.","favoriteFruit":"banana"},{"id":1,"guid":"6dd6be63-db93-478a-9f71-3778eddf6fb6","isActive":false,"balance":"$3,443.36","picture":"http://placehold.it/120x120","age":24,"eyeColor":"green","name":"Terri Lawrence","gender":"female","company":"KIOSK","email":"terrilawrence@kiosk.com","phone":"+1 (819) 550-2863","address":"412 Cedar Street, Robinson, Missouri, 164","about":"Adipisicing reprehenderit ut officia ipsum. Ipsum nisi magna cillum nisi dolore et in nisi reprehenderit ad. Deserunt ullamco occaecat mollit id anim officia eu. Nostrud in incididunt occaecat veniam. Ea commodo laborum ex commodo voluptate excepteur laborum. Laboris eiusmod magna reprehenderit nostrud consectetur consectetur dolore nostrud labore laborum non. Enim id elit culpa nisi irure enim reprehenderit eu nisi nulla esse aliqua eiusmod.\r\n","registered":"2014-03-21T15:47:40 -00:00","latitude":-8.823052,"longitude":114.09179,"tags":["incididunt","laboris","in","ipsum","velit","veniam","irure"],"friends":[{"id":0,"name":"Wendy Rivers"},{"id":1,"name":"Denise Cline"},{"id":2,"name":"Snider Gardner"}],"greeting":"Hello, Terri Lawrence! You have 7 unread messages.","favoriteFruit":"strawberry"},{"id":2,"guid":"9950d41b-3700-4218-90ef-251c8a38a49e","isActive":true,"balance":"$2,970.98","picture":"http://placehold.it/120x120","age":26,"eyeColor":"brown","name":"Concetta Bolton","gender":"female","company":"COMVEX","email":"concettabolton@comvex.com","phone":"+1 (953) 544-3005","address":"544 Lester Court, Herbster, Wyoming, 2336","about":"Laborum commodo laborum reprehenderit magna laborum aliquip aliqua exercitation in magna voluptate. Ut veniam laboris exercitation exercitation officia sint sunt aliqua velit. Dolore ipsum amet anim officia voluptate fugiat ea veniam sit velit.\r\n","registered":"2014-01-09T00:43:04 -00:00","latitude":52.277565,"longitude":-45.962222,"tags":["incididunt","magna","labore","occaecat","nisi","proident","velit"],"friends":[{"id":0,"name":"Juanita Peters"},{"id":1,"name":"Hooper Graves"},{"id":2,"name":"Aisha Barr"}],"greeting":"Hello, Concetta Bolton! You have 7 unread messages.","favoriteFruit":"apple"},{"id":3,"guid":"c0cdf69c-8c62-4a84-bbd9-dbb3b9d1b4b5","isActive":false,"balance":"$2,556.57","picture":"http://placehold.it/120x120","age":39,"eyeColor":"blue","name":"Silvia Sullivan","gender":"female","company":"ENERSOL","email":"silviasullivan@enersol.com","phone":"+1 (915) 403-2936","address":"579 Hausman Street, Rushford, Pennsylvania, 4054","about":"Nisi magna ipsum aliquip sint sit veniam consectetur amet consectetur ullamco nostrud. Velit labore adipisicing irure occaecat labore commodo ea in non nulla dolor dolor. Ea ea nulla ea enim mollit id velit ex occaecat eu voluptate exercitation consectetur. Tempor labore sit eiusmod exercitation consequat. Sit culpa proident irure magna occaecat ex Lorem esse duis culpa esse. Commodo veniam anim pariatur reprehenderit.\r\n","registered":"2014-01-15T18:59:46 -00:00","latitude":14.59724,"longitude":-106.923976,"tags":["esse","duis","veniam","sunt","esse","exercitation","commodo"],"friends":[{"id":0,"name":"Dillon Conway"},{"id":1,"name":"Goodwin Paul"},{"id":2,"name":"Georgette Andrews"}],"greeting":"Hello, Silvia Sullivan! You have 1 unread messages.","favoriteFruit":"banana"},{"id":4,"guid":"57810cd8-3144-4e58-8169-1f6b009f7a76","isActive":true,"balance":"$2,182.40","picture":"http://placehold.it/120x120","age":23,"eyeColor":"brown","name":"Leigh Shelton","gender":"female","company":"NIXELT","email":"leighshelton@nixelt.com","phone":"+1 (882) 530-2103","address":"939 Minna Street, Riegelwood, Nevada, 169","about":"Excepteur magna ea dolore ex enim sit ipsum mollit labore proident exercitation duis elit. Aliquip ut esse sunt velit veniam et. Sint proident velit laboris consequat cupidatat culpa laborum qui. Excepteur aliquip ut amet culpa in adipisicing ea cillum commodo sunt ea. Sint laboris amet minim tempor laborum eiusmod elit sit ad nostrud. Lorem ipsum id labore in qui dolor deserunt ullamco culpa eu aliquip magna anim.\r\n","registered":"2014-03-16T23:43:34 -00:00","latitude":38.676846,"longitude":103.026061,"tags":["aliqua","duis","non","labore","consequat","quis","ipsum"],"friends":[{"id":0,"name":"Maude Duncan"},{"id":1,"name":"Hancock Alvarez"},{"id":2,"name":"Olive Campbell"}],"greeting":"Hello, Leigh Shelton! You have 7 unread messages.","favoriteFruit":"banana"}]</script>
+    <script type="text/javascript">
+        var myApp = angular.module('myApp', ['ngAnimate', 'ngMaps']);
+        myApp.controller('appController', ['$scope', '$http',
+            function($scope, $http){
+                $scope.list_user = [];
+                $scope.loadData = function(data) {
+                    $scope.list_user = data
+                }
+            }
+        ]);
+
+        myApp.directive("jsonData", function() {
+            return {
+                restrict: "A",
+                scope: {
+                    init: "&"
+                },
+                link: function(a, b) {
+                    var c = b.text().split("|");
+                    b.text("");
+                    try {
+                        var d = $.parseJSON(c[0]);
+                        a.init && a.init.call(a, {
+                            data: d
+                        })
+                    } catch (h) {
+                        console.log(h);
+                    }
+                }
+            }
+        });
+
+        myApp.animation('.slide_js', [function(){
+            var NG_HIDE_CLASS = 'ng-hide';
+            return {
+                beforeAddClass: function(element, className, done) {
+                    if(className === NG_HIDE_CLASS) {
+                        element.slideUp(done);
+                    }
+                },
+                removeClass: function(element, className, done) {
+                    if(className === NG_HIDE_CLASS) {
+                        element.hide().slideDown(done);
+                    }
+                }
+            }
+        }]);
+    </script>
+    </body>
+</html>

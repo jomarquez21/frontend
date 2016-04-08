@@ -1,0 +1,338 @@
+body {
+  background-color: #eee !important;
+  font-family: 'colaborate-regular' !important;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'roboto-light';
+  src: url('roboto-light-webfont.eot');
+  src: url('roboto-light-webfont.eot?#iefix') format('embedded-opentype'), url('roboto-light-webfont.woff2') format('woff2'), url('roboto-light-webfont.woff') format('woff'), url('roboto-light-webfont.ttf') format('truetype'), url('roboto-light-webfont.svg#roboto-light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'colaborate-regular';
+  src: url('colabreg-webfont.eot');
+  src: url('colabreg-webfont.eot?#iefix') format('embedded-opentype'), url('colabreg-webfont.woff2') format('woff2'), url('colabreg-webfont.woff') format('woff'), url('colabreg-webfont.ttf') format('truetype'), url('.colabreg-webfont.svg#colaborate-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::selection {
+  background: #c9c9c9;
+}
+
+::-moz-selection {
+  background: #c9c9c9;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px !important;
+  height: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #828282 !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  background: #828282 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf !important;
+}
+
+::-moz-scrollbar-button {
+  width: 0px !important;
+  height: 0 !important;
+}
+
+::-moz-scrollbar-track {
+  background: #828282 !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+::-moz-scrollbar {
+  width: 10px !important;
+  background: #828282 !important;
+}
+
+::-moz-scrollbar-thumb {
+  background: #cfcfcf !important;
+}
+.m_b_1{
+    margin-bottom: 10px;
+}
+.m_b_2{
+  margin-bottom: 20px;
+}
+.m_b {
+  margin-bottom: 40px;
+}
+
+.box_white {
+  background-color: #ffffff;
+  margin: 105px 0 80px 0;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  box-shadow: 0 0 1px #828282;
+  -webkit-box-shadow: 0 0 1px #828282;
+}
+
+.box_accordions {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 7px;
+}
+
+.box_accordions .accordions {
+  width: 100%;
+  min-height: 40px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+    padding: 11px 0 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.box_accordions .accordions:last-child {
+  border-bottom: none;
+}
+
+.box_accordions .accordions .p_title {
+  font-size: 16px;
+  color: #2b2b2b;
+  margin-right: 10px;
+  font-family: 'roboto-light';
+  font-weight: bold;
+}
+
+.box_accordions .accordions .icn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: #828282;
+  cursor: pointer !important;
+}
+
+.box_accordions .accordions .list_selected {
+  width: 100%;
+}
+
+.box_accordions .accordions .list_selected ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.box_accordions .accordions .list_selected ul li {
+  font-size: 15px;
+  color: #828282;
+  background-color: #ffffff;
+}
+.box_accordions .accordions ul li .text_one{
+float:left;
+width: 85px;
+}
+
+.box_accordions .accordions ul li .text_two {
+      -webkit-column-count: 1;
+        -moz-column-count: 1;
+}
+
+.box_accordions .accordions:hover {
+  background-color: rgba(201, 201, 201, 0.2);
+}
+
+.box_accordions .accordions .map {
+  width: 100%;
+  height: 200px;
+}
+
+.box_info {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.box_info .box_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  boder: 1px solid #c9c9c9;
+  background-image: url(M.jpg);
+  background-size: cover;
+  margin: 20px;
+  position: absolute;
+  right: 0px;
+}
+
+.box_info ul {
+  margin: 0;
+  padding: 0;
+}
+
+.box_info ul li {
+  list-style-type: none;
+}
+
+.box_info ul p {
+  font-weight: bold;
+}
+
+.box_info ul p span {
+  font-weight: normal;
+}
+
+.tags {
+  width: 100%;
+}
+
+.tags h3 {
+  margin-bottom: 18px;
+  margin-top: -6px;
+}
+
+.tags ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tags ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.tags ul li p {
+  border: 1px solid #c9c9c9;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -o-border-radius: 13px;
+  -ms-border-radius: 13px;
+  padding: 0px 7px 0px 6px;
+  width: auto;
+  margin: 0;
+  background: #00b6ae;
+  color: #fff;
+  box-shadow: 1px 1px 1px #c9c9c9;
+}
+
+.tags ul li p span {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.box_header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background: #009688;
+  z-index: 1;
+  box-shadow: 1px 2px 1px #828282;
+}
+
+.box_header h2 {
+  color: #fff;
+  font-family: 'roboto-light';
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.box_footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+  width: 100%;
+  background: #212121;
+  color: #fff;
+}
+
+.box_footer .box_info_footer {
+  margin: auto;
+}
+
+.box_footer .box_info_footer p {
+  margin: 0 !important;
+}
+
+.box_footer .photo_developer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(jomarquez.JPG);
+  background-size: cover;
+  margin: auto;
+}
+
+.info_developer {
+  display: inline-block;
+  text-align: left;
+  padding: 13px 0 0 16px;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:321px) {
+  .box_footer .box_info_footer {
+    width: 100%;
+  }
+
+  .box_footer {
+    padding: 5px 0;
+  }
+  .box_header h2{
+    font-size: 30px;
+      margin-top: 13px;
+  }
+
+}
+
+@media (min-width:500px) {
+  .box_footer .box_info_footer {
+    width: 416px;
+  }
+
+  .box_footer .photo_developer,
+  .info_developer {
+    float: left;
+  }
+   .box_footer {
+    padding: 5px 0 5px 15px;
+  }
+   .box_header h2{
+    font-size: 40px;
+      margin-top: 7px;
+  }
+
+}
+
+@media (min-width:768px) {
+  .box_footer .box_info_footer {
+    width: 416px;
+  }
+
+ 
+
+}
